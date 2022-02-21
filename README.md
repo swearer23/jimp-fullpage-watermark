@@ -103,7 +103,45 @@ var options = {
 watermark.addTextWatermark('./img/main.jpg', options);
 ```
 
+#### coverTextWatermark(imageSource, options) 
+
+API to cover multiple text watermark in given image, with support for rotating the text. It takes two arguments:
+1. path of the image
+2. options object. This argument is optional
+
+**Options**
+
+Various options supported by this API are:
+- **text** - To specify the text to cover on the main image.
+- **textSize** - To specify size of text over the main image, value ranged from 1 to 8.
+- **dstPath** - To specify the output path. Default is 'watermark.{sourceFile ext}'.
+other than these, we took extra params for specifying the cover behavior
+- **rotate** - To specify what angle the text should rotate, value range is a rational 0 - 360. default setting is 30.
+- **colWidth** - Since the text is placed in the center of a generated image, this is to specify width of the generated image.
+- **rowHeight** - Since the text is placed in the center of a generated image, this is to specify height of the generated image.
+
+**Example**
+
+```javascript
+var watermark = require('jimp-watermark');
+
+watermark.coverTextWatermark('./img/main.jpg', {
+  textSize: 5,
+  opacity: 0.5,
+  rotation: 45,
+  text: 'watermark test',
+  colWidth: 300,
+  rowHeight: 50
+}).then(data => {
+    console.log(data);
+}).catch(err => {
+    console.log(err);
+});
+```
+
 ### Inspiration
+[https://github.com/sushantpaudel/jimp-watermark](https://github.com/sushantpaudel/jimp-watermark)
+
 [https://github.com/luthraG/image-watermark](https://github.com/luthraG/image-watermark)
 
 [Image Processing in NodeJS with Jimp - Medium](https://medium.com/@rossbulat/image-processing-in-nodejs-with-jimp-174f39336153)

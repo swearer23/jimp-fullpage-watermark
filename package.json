@@ -1,7 +1,7 @@
 {
-  "name": "jimp-watermark",
-  "version": "1.1.0",
-  "description": "This is a library to add image watermark to an image.",
+  "name": "jimp-fullpage-watermark",
+  "version": "0.0.1",
+  "description": "This is a library to add image watermark to an image. enhanced option for full page water marking",
   "main": "index.js",
   "scripts": {
     "test": "node index.test.js"
@@ -14,11 +14,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/sushantpaudel/jimp-watermark.git"
+    "url": "https://github.com/swearer23/jimp-fullpage-watermark"
   },
   "author": {
-    "name": "Sushant Paudel",
-    "email": "paudelsushant482@gmail.com"
+    "name": "rollotomasi",
+    "email": "swearer23@163.com"
   },
   "license": "MIT",
   "dependencies": {
