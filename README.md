@@ -3,12 +3,12 @@ A powerful watermark library based on Jimp for node.js. This can be used to over
 
 ### Installation
 
-	'npm install jimp-watermark'
+	'npm install jimp-fullpage-watermark'
 
 ### Server-side usage
 
 ```javascript
-var watermark = require('jimp-watermark');
+var watermark = require('jimp-fullpage-watermark');
 
 watermark.addWatermark('/path/to/image/file','/path/to/image/watermark', options);
 
@@ -35,7 +35,7 @@ Various options supported by this API are :
 **Example**
 
 ```javascript
-var watermark = require('jimp-watermark');
+var watermark = require('jimp-fullpage-watermark');
 
 watermark.addWatermark('./img/main.jpg', './img/logo.png').then(data => {
     console.log(data);
@@ -51,7 +51,7 @@ watermark.addWatermark('./img/main.jpg', './img/logo.png').then(data => {
 //
 // Options to specify output path
 //
-var watermark = require('jimp-watermark');
+var watermark = require('jimp-fullpage-watermark');
 var options = {
 	'ratio': 0.6,// Should be less than one
     'opacity': 0.6, //Should be less than one
@@ -78,7 +78,7 @@ Various options supported by this API are :
 **Example**
 
 ```javascript
-var watermark = require('jimp-watermark');
+var watermark = require('jimp-fullpage-watermark');
 
 watermark.addTextWatermark('./img/main.jpg').then(data => {
     console.log(data);
@@ -94,7 +94,7 @@ watermark.addTextWatermark('./img/main.jpg').then(data => {
 //
 // Options to specify output path
 //
-var watermark = require('jimp-watermark');
+var watermark = require('jimp-fullpage-watermark');
 var options = {
 	'text': 'watermark-test',
     'textSize': 6, //Should be between 1-8
@@ -123,7 +123,7 @@ other than these, we took extra params for specifying the cover behavior
 **Example**
 
 ```javascript
-var watermark = require('jimp-watermark');
+var watermark = require('jimp-fullpage-watermark');
 
 watermark.coverTextWatermark('./img/main.jpg', {
   textSize: 5,
