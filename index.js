@@ -191,9 +191,3 @@ module.exports.coverTextWatermark = async (mainImage, options) => {
   }
 }
 
-module.exports.coverTextWatermark('https://upload-images.jianshu.io/upload_images/2085791-ed42be1541fe8ad4.png', {
-  textSize: 5,
-  opacity: 0.5,
-  rotation: 45,
-  text: "yangshiwei"
-})
